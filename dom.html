@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore DOM</title>
+    <style>
+        article{
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin: 5px;
+            padding: 5px;
+        }
+        .special h3{
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h3>Exploring DOM </h3>
+            <article>
+                <h3>article-1</h3>
+                <p title ="I am the best" class="author" id ="bestSeller" >author-1</p>
+                <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat voluptatibus quo sunt odio modi illum dicta cupiditate velit ullam architecto!</p>
+            </article>
+            <article class="special">
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Nisi officia, deserunt minus ipsum ad labore esse dicta, distinctio aperiam assumenda dolore. Pariatur corporis eos amet, ut a harum?</p>
+            </article>
+            <article class="special">
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Ipsam animi est eum et delectus blanditiis, similique at? Expedita impedit officia quidem alias possimus molestiae beatae aliquid non voluptas!</p>
+            </article>
+
+        </section>
+    </main>
+    <script>
+        // document.body.style.backgroundColor = 'tomato';
+        // var authors = document.getElementsByClassName('author');
+        // for(var i = 0; i<authors.length; i++){
+        //     var element = authors[i];
+        //     //console.log(element.innerHTML);
+        //     element.setAttribute('title', 'All the Best');
+        //     element.innerHTML = 'Lekhok-' + (i+1);
+        //     element.style.backgroundColor = 'lightblue';
+        //     element.style.margin = '10px';
+        // }
+
+        document.body.style.backgroundColor = 'skyblue';
+        var authors = document.querySelectorAll('.special h3');
+        for(var i = 0; i<authors.length; i++){
+            var element = authors[i];
+            //console.log(element.innerHTML);
+            element.setAttribute('title', 'All the Best');
+            element.innerHTML = 'Lekhok-' + (i+1);
+            element.style.backgroundColor = 'lightblue';
+            element.style.margin = '10px';
+            console.log(element);
+        }
+
+
+    </script>
+</body>
+</html>
